@@ -1,0 +1,77 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <br>
+      <div id="headingDiv" class="btn btn-warning">
+        <h2 id="textInHeading">EMOTION TO EMOJI APP</h2>
+        <h1 id="headingEmoji"> 😊😀😔😢😡😤</h1>
+       
+      </div>
+      <br>
+     
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: yellow">Are you Happy?</b>
+        <br>
+        <b style="color: black">Are you Sad?</b>
+        <br>
+        <b style="color: red">Are you Angry?</b>
+        <br>
+      </p>
+
+   
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <center>
+	      <label>Webcam view - </label>
+          <div id="camera"></div>
+        <br><br>
+        <button id="buttonfds" onclick = "captureImage()" class="btn btn-warning">Capture Image</button>
+        </center>
+      </div>
+
+  
+
+    
+  <div id="result div" class="col-md-4 col-sm-12 col-xs-12">
+    <label id="Prediction1Label">Prediction 1</label>
+    <p id="Result1" class="emotionName"></p>
+    <p id="predict1Emoji" class="emoji"></p>
+    <label id="Prediction2Label">Prediction 2</label>
+    <p id="Result2" class="emotionName"></p>
+    <p id="predict2Emoji" class="emoji"></p>
+  </div>
+
+
+  <!-- xs = <768, sm = 768 - 992, md = 992 - 1200, lg = 1200 -->
+  <div id="photo" class="col-md-4 col-sm-12 col-xs-12">
+  <label>Captured image - </label>
+          <div id="photoResult"></div>
+        <br><br>
+        <button id="buttonfds" class="btn btn-warning" onclick = "predictEmotion()" >Predict Emotion</button></div>
+
+</div>
+</center>
+<script src="main.js"></script>
+
+
+  </body>
+</html>
+
+ 
